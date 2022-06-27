@@ -1,7 +1,7 @@
 server:
   port: 8081
 
-srping:
+spring:
   cloud:
     config:
       server:
@@ -15,4 +15,3 @@ srping:
     user:
       name: root
       password: s3cr3t
-
