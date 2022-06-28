@@ -51,6 +51,7 @@ public class InvoiceServiceImpl implements InvoiceService {
         return invoiceDB;
     }
 
+
     @Override
     public Invoice updateInvoice(Invoice invoice) {
         Invoice invoiceDB = getInvoice(invoice.getId());

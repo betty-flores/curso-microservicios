@@ -32,7 +32,7 @@ public class Invoice {
     private Date createAt;
 
     @Valid
-    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+    @JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "invoice_id")
     private List<InvoiceItem> items;
@@ -42,7 +42,7 @@ public class Invoice {
     @Transient
     private Customer customer;
 
-    public Invoice() {
+    public Invoice(){
         items = new ArrayList<>();
     }
 

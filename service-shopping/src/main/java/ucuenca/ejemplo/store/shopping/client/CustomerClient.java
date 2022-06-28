@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import ucuenca.ejemplo.store.shopping.model.Customer;
 
-@FeignClient(name = "service-customer")
+@FeignClient(name = "service-customer", fallback = CustomerHystrixFallbackFactory.class)
 public interface CustomerClient {
-    @GetMapping(value = "/{id}")
+    @GetMapping(value = "/customers/{id}")
     public ResponseEntity<Customer> getCustomer(@PathVariable("id") long id);
 
 }
