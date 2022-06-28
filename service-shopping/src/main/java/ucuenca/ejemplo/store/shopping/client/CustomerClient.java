@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import ucuenca.ejemplo.store.shopping.model.Customer;
 
 @FeignClient(name = "service-customer")
-@RequestMapping("/customers")
 public interface CustomerClient {
     @GetMapping(value = "/{id}")
     public ResponseEntity<Customer> getCustomer(@PathVariable("id") long id);
