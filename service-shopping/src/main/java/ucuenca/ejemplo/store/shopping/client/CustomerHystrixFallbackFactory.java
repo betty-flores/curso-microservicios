@@ -1,8 +1,10 @@
 package ucuenca.ejemplo.store.shopping.client;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Component;
 import ucuenca.ejemplo.store.shopping.model.Customer;
 
+@Component
 public class CustomerHystrixFallbackFactory implements CustomerClient{
     @Override
     public ResponseEntity<Customer> getCustomer(long id) {
